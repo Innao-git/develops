@@ -10,7 +10,7 @@ let internal_urls = new Set();
 let internal_urls_from_sitemap = new Set();
 let subdomains = new Set();
 
-/*
+
 test('Develops Today: title, url', async ({page}) => {
     await page.goto('https://develops.today/');
     const page_title = await page.title();
@@ -73,7 +73,7 @@ test('Send contact form', async ({page}) => {
     await page.close();
 
 });
-*/
+
 
 //write a recursive function to check all internal links on the website
 async function check_internal_links(page, internal_urls, subdomains) {
@@ -186,7 +186,7 @@ test('Unique internal urls ammount', async ({page}) => {
     await expect(internal_urls.size).toBeGreaterThan(0);
     await page.close();
 });
-/*
+
 
 test('Get URLs from the sitemap', async ({page}) => {
     let internal_urls_from_sitemap = new Set();
@@ -219,7 +219,7 @@ test('Compare internal URLs with sitemap URLs', async ({page}) => {
     await expect(diff.size).toBe(0);
     await page.close();
 });
-*/
+
 
 
 
